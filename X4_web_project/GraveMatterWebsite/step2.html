@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grave Matters | Find the Right Support for Your Loss</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <nav class="container">
+            <div class="logo">&#128367; Grave Matters</div>
+            <ul class="nav-links">
+                <li><a href="step1.html">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+        </nav>
+        <div class="page-indicator">
+            <span id="page-indicator-text">Step 2 of 4: Choose your services</span>
+        </div>
+        
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                 <div class="logo"> <img src="GMLogo.png" alt="Grave Matters Logo" class="logo-image" style="width: 450px; height: 100px;"> </div>
+
+                <h1>Personalized Options Comparison</h1>
+                <p class="subtitle">
+                    Our system analyzed your form using artificial intelligence and presents you with a detailed 
+                    comparison of the best options in the market. Select the options that interest you and export to PDF.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Recommended Options for You</h2>
+            <p class="section-subtitle">
+                Based on your preferences, we found the following options that best match your needs
+            </p>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <button class="save-button" onclick="toggleSave(this)">♡</button>
+                    <div class="card-header">
+                        <div>
+                            <h3 class="provider-name">Service A</h3>
+                        </div>
+                    </div>
+                    <div class="price-highlight">
+                        <div class="price-amount">$349</div>
+                    </div>
+                    <div class="comparison-features">
+                        <div class="feature-row">
+                            <span class="feature-name">Customer Rating</span>
+                            <span class="feature-value">
+                                <span class="rating-stars">★★★★★</span>
+                                4.8/5
+                            </span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Response Time</span>
+                            <span class="feature-value">24/7</span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Experience</span>
+                            <span class="feature-value">15 years</span>
+                        </div>
+                    </div>
+                    <div class="insights">
+                        <h4>Key Insights</h4>
+                        <p>
+                            Excellent option for you! Based on your preferences for quality and fast service, 
+                            this provider offers the best value for money in the premium category.
+                        </p>
+                    </div>
+                </div>
+                <div class="comparison-card" >
+                    <button class="save-button" onclick="toggleSave(this)">♡</button>
+                    <div class="card-header">
+                        <div>
+                            <h3 class="provider-name">Service B</h3>
+                        </div>
+                    </div>
+                    <div class="price-highlight">
+                        <div class="price-amount">$175</div>
+                    </div>
+                    <div class="comparison-features">
+                        <div class="feature-row">
+                            <span class="feature-name">Customer Rating</span>
+                            <span class="feature-value">
+                                <span class="rating-stars">★★★★☆</span>
+                                4.5/5
+                            </span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Response Time</span>
+                            <span class="feature-value">Business hours</span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Experience</span>
+                            <span class="feature-value">8 years</span>
+                        </div>
+                    </div>
+                    <div class="insights">
+                        <h4>Key Insights</h4>
+                        <p>
+                            Great choice! The most popular option among customers with similar profiles to yours. 
+                            Offers a good balance between cost and service quality.
+                        </p>
+                    </div>
+                </div>
+                <div class="comparison-card">
+                    <button class="save-button" onclick="toggleSave(this)">♡</button>
+                    <div class="card-header">
+                        <div>
+                            <h3 class="provider-name">Service C</h3>
+                        </div>
+                    </div>
+                    <div class="price-highlight">
+                        <div class="price-amount">$99</div>
+                    </div>
+                    <div class="comparison-features">
+                        <div class="feature-row">
+                            <span class="feature-name">Customer Rating</span>
+                            <span class="feature-value">
+                                <span class="rating-stars">★★★★☆</span>
+                                4.2/5
+                            </span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Response Time</span>
+                            <span class="feature-value">48 hours</span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Experience</span>
+                            <span class="feature-value">5 years</span>
+                        </div>
+                    </div>
+                    <div class="insights">
+                        <h4>Key Insights</h4>
+                        <p>
+                            Cost-effective option! Despite the lower price, offers quality service suitable for 
+                            basic needs. Perfect for those seeking an economical solution.
+                        </p>
+                    </div>
+                </div>
+                <div class="comparison-card" data-category="professional">
+                    <button class="save-button" onclick="toggleSave(this)">♡</button>
+                    <div class="card-header">
+                        <div>
+                            <h3 class="provider-name">service D</h3>
+                        </div>
+                    </div>
+                    <div class="price-highlight">
+                        <div class="price-amount">$299</div>
+                    </div>
+                    <div class="comparison-features">
+                        <div class="feature-row">
+                            <span class="feature-name">Customer Rating</span>
+                            <span class="feature-value">
+                                <span class="rating-stars">★★★★★</span>
+                                4.7/5
+                            </span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Response Time</span>
+                            <span class="feature-value">Instant</span>
+                        </div>
+                        <div class="feature-row">
+                            <span class="feature-name">Experience</span>
+                            <span class="feature-value">12 years</span>
+                        </div>
+                    </div>
+                    <div class="insights">
+                        <h4>Key Insights</h4>
+                        <p>
+                            Smart choice! Combines high-level professional service with competitive pricing. 
+                            Especially recommended for customers seeking reliable and professional service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section class="saved-selections">
+                <div class="container">
+                    <div class="saved-counter">
+                        <span class="counter-number" id="savedCount">0</span>
+                        <span class="counter-text">Options Saved</span>
+                    </div>
+                    <div class="export-section">
+                        <h3>Export Your Selections</h3>
+                        <p>After selecting the options that interest you, you can export the comparison to a PDF file or continue to the summary</p>
+                        <div class="action-buttons">
+
+                        <button type="button" class="export-button" id="exportBtn" onclick="window.location.href='step3.html'" style="width: 50%; background: #38a169;">
+                                Continue to Summary →
+                        </button>
+               
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="cta-buttons-wrapper" style="text-align: center; margin-top: 3rem;">
+                <button class="cta-button" onclick="window.location.href='step1.html'" style="background: #6b7280;">
+                    ← Back to Preferences
+                </button>
+            </div>
+        <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#grief-counseling">Grief Counseling</a></li>
+                        <li><a href="#funeral-homes">Funeral Homes</a></li>
+                        <li><a href="#legal-services">Legal Services</a></li>
+                        <li><a href="#support-groups">Support Groups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:1-800-GRAVE-01">1-800-GRAVE-01</a></li>
+                        <li><a href="mailto:support@gravematters.com">support@gravematters.com</a></li>
+                        <li><a href="#chat">24/7 Support</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+           <div class="container">
+            <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grave Matters. All rights reserved. | Privacy Policy | Terms of Service</p>
+                    <h3>IDs</h3>
+                    <div class="footer-section">
+                    <ul>
+                        <li>212081889 | 213384860 | 212087373 | 211575451</li>
+                    </ul>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </footer>
+    </div>
+<script>
+    let savedOptions = [];
+    function toggleSave(button) 
+    {
+        const card = button.closest('.comparison-card');
+        const providerName = card.querySelector('.provider-name').innerText;
+        if(savedOptions.includes(providerName)) 
+        {
+            savedOptions = savedOptions.filter(item => item !== providerName);
+            button.textContent = '♡'; 
+            card.classList.remove('saved');
+        } 
+        else 
+        {
+            savedOptions.push(providerName);
+            button.textContent = '❤️'; 
+            card.classList.add('saved');
+        }
+        document.getElementById('savedCount').textContent = savedOptions.length;
+        localStorage.setItem('savedOptions', JSON.stringify(savedOptions));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+    const stored = localStorage.getItem('savedOptions');
+    if(stored) 
+    {
+        savedOptions = JSON.parse(stored);
+        document.querySelectorAll('.comparison-card').forEach(card => 
+        {
+            const name = card.querySelector('.provider-name').innerText;
+            if(savedOptions.includes(name)) 
+            {
+                card.querySelector('.save-button').textContent = '❤️';
+                card.classList.add('saved');
+            }
+        });
+        document.getElementById('savedCount').textContent = savedOptions.length;
+    }
+  });
+</script>
+
+</body>
+</html>

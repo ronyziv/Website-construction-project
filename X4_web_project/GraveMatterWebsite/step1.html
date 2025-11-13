@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grave Matters | Find the Right Support for Your Loss</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // the omri script!
+        function func1()
+        {
+            // getting values for the user deails
+            const nameVal  = document.getElementById('contact-name').value;
+            const emailVal = document.getElementById('contact-email').value;
+            const phoneVal = document.getElementById('contact-phone').value;
+            
+            // putting details in localstorage
+            localStorage.setItem("nameVal", nameVal);
+            localStorage.setItem("emailVal", emailVal);
+            localStorage.setItem("phoneVal", phoneVal);
+            
+            // going over all of elements named "choice"(or "urgency" or "location") and checking if they are checked or not - I THINK this is how it works?
+            const selectLoss = document.querySelector('input[name="omriCodeAttempt"]:checked');
+            const selectUrgency = document.querySelector('input[name="urgency"]:checked');
+            const selectLoc = document.querySelector('input[name="location"]:checked');
+            
+            // if yes: sending them to local storage
+            if(selectLoss) 
+            {
+                localStorage.setItem("loss", selectLoss.value);
+            }
+            else //if not: send pre-chosen text
+            {
+                localStorage.setItem("loss", "No option selected.");
+            }
+            if(selectUrgency) 
+            {
+                localStorage.setItem("urgency", selectUrgency.value);
+            }
+            else //if not: send pre-chosen text
+            {
+                localStorage.setItem("urgency", "Flexible");
+            }
+            if(selectLoc) 
+            {
+                localStorage.setItem("location", selectLoc.value);
+            }
+            else //if not: send pre-chosen text
+            {
+                localStorage.setItem("location", "Both Options");
+            }
+            // will NOT display summery of budget since the user chooses which plan he wants according to whatever he thinks and is in the budget
+            // if we had a database of different plans and some fancy algorithm to check stuff. could sort it to his needs. i think its an overkill for us
+            const selecredServices = document.querySelectorAll('input[name="fruit"]:checked');
+            const selectedServicesVal = [];
+            if(selecredServices.length>0)
+            {
+                for(let i = 0; i < selecredServices.length; i++) 
+                {
+                    selectedServicesVal.push(checkboxes[i].value);
+                }
+                localStorage.setItem("services", selecredServicesVal);
+            }
+            else
+            {
+                localStorage.setItem("services", "No services selected");
+            }
+
+            // LAST STEP: changing page to page2!
+            window.location.href='step2.html';
+            }
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">&#128367; Grave Matters</div>
+            <ul class="nav-links">
+                <li><a href="step1.html">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="page-indicator">
+            <div>Step 1 of 4: Tell us about your needs</div>
+        </div>
+    </header>
+    <div class="container">
+    <hr>
+    <div id="page1" class="page active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                <div class="logo"> <img src="GMLogo.png" alt="Grave Matters Logo" class="logo-image" style="width: 450px; height: 100px;"> </div>
+                    <h1>Find the Right Support for Your Loss</h1>
+                    <p class="subtitle">
+                        We are here to match you with the exact grief support services you need. 
+                        Personalized, local, and available when you need it most.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title fade-in">How Grave Matters Works</h2>
+                <p class="section-subtitle fade-in">
+                    We connect you with vetted grief support services in your area, tailored to your specific situation and preferences.
+                </p>
+                
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h3 style="margin-bottom: 1rem; color: #1a202c;">For life's most difficult moments</h3>
+                        <p style="margin-bottom: 1.5rem;">
+                            When you're grieving, the last thing you want is to spend hours researching and calling different services. 
+                            We've already done the work for you.
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            Answer a few questions about your needs, and we'll show you personalized options from counselors, 
+                            funeral homes, legal advisors, and support groups in your area.
+                        </p>
+                        <p>
+                            Each service is rated, reviewed, and verified. You can compare options, read reviews, 
+                            and connect directly with the providers that feel right for you.
+                        </p>
+                    </div>
+                    
+                    <div class="about-visual fade-in">
+                        <div class="service-icons">
+                            <div class="service-icon">
+                                <span>🤝</span>
+                                <p>Counseling</p>
+                            </div>
+                            <div class="service-icon">
+                                <span>⚰️</span>
+                                <p>Funeral Homes</p>
+                            </div>
+                            <div class="service-icon">
+                                <span>⚖️</span>
+                                <p>Legal Help</p>
+                            </div>
+                            <div class="service-icon">
+                                <span>👥</span>
+                                <p>Support Groups</p>
+                            </div>
+                            <div class="service-icon">
+                                <span>🏥</span>
+                                <p>Medical Support</p>
+                            </div>
+                            <div class="service-icon">
+                                <span>💙</span>
+                                <p>Wellness</p>
+                            </div>
+                        </div>
+                        <p style="color: #4a5568; font-style: italic;">All services vetted and reviewed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preferences-form">
+            <div class="container">
+                <div class="form-container">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #1a202c;">Tell Us About Your Needs</h2>
+                    
+                    
+                    <form id="preferences-form">
+                        <div class="form-group">
+                            <label>What type of loss are you dealing with?</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-parent" name="omriCodeAttempt" value="Parent">
+                                    <label for="loss-parent">Parent</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-spouse" name="omriCodeAttempt" value="Spouse">
+                                    <label for="loss-spouse">Spouse/Partner</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-child" name="omriCodeAttempt" value="Child">
+                                    <label for="loss-child">Child</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-sibling" name="omriCodeAttempt" value="Sibling">
+                                    <label for="loss-sibling">Sibling</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-friend" name="omriCodeAttempt" value="Friend">
+                                    <label for="loss-friend">Friend</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="loss-other" name="omriCodeAttempt" value="Other">
+                                    <label for="loss-other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What services do you need? (Select all that apply)</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-counseling" name="services" value="Counseling">
+                                    <label for="service-counseling">🤝 Grief Counseling</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-funeral" name="services" value="Funeral">
+                                    <label for="service-funeral">⚰️ Funeral Planning</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-legal" name="services" value="legal">
+                                    <label for="service-legal">⚖️ Legal/Estate Help</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-support" name="services" value="Support">
+                                    <label for="service-support">👥 Support Groups</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-medical" name="services" value="Medical">
+                                    <label for="service-medical">🏥 Medical Support</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="service-wellness" name="services" value="Wellness">
+                                    <label for="service-wellness">💙 Wellness/Self-care</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How urgent is your need for support?</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="urgency-immediate" name="urgency" value="Immediate">
+                                    <label for="urgency-immediate">Immediate (today)</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="urgency-week" name="urgency" value="Week">
+                                    <label for="urgency-week">Within a week</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="urgency-month" name="urgency" value="Month">
+                                    <label for="urgency-month">Within a month</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="urgency-flexible" name="urgency" value="Flexible">
+                                    <label for="urgency-flexible">In the future - flexible</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget range per session/service</label>
+                            <input type="range" id="budget" name="budget" min="0" max="500" value="150" class="range-slider" oninput="document.getElementById('budget-display').textContent = '$' + this.value">
+                            <div class="range-display" id="budget-display">$150</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location preference</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="location-person" name="location" value="In Person">
+                                    <label for="location-person">In-person only</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="location-virtual" name="location" value="Virtual">
+                                    <label for="location-virtual">Virtual only</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="location-both" name="location" value="Both Options">
+                                    <label for="location-both">Both options</label>
+                                </div>
+
+                                <div class="radio-option" style="grid-column: 1 / -1; margin-top: 2rem;">
+                                    <fieldset style="border: none; padding: 0;">
+                                        <legend style="font-weight: 600; color: #2d3748; margin-bottom: 1rem;">Contact Information</legend>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                            <input id="contact-name" placeholder="Full Name" required style="flex:1; min-width:180px; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1rem;">
+                                            <input  id="contact-email" placeholder="Email" required style="flex:1; min-width:180px; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1rem;">
+                                            <input  id="contact-phone" placeholder="Phone" required style="flex:1; min-width:140px; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1rem;">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <button type="button" onclick="func1()" class="cta-button" style="width: 100%; margin-top: 2rem;">
+                            Find My Support Options →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#grief-counseling">Grief Counseling</a></li>
+                        <li><a href="#funeral-homes">Funeral Homes</a></li>
+                        <li><a href="#legal-services">Legal Services</a></li>
+                        <li><a href="#support-groups">Support Groups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:1-800-GRAVE-01">1-800-GRAVE-01</a></li>
+                        <li><a href="mailto:support@gravematters.com">support@gravematters.com</a></li>
+                        <li><a href="#chat">24/7 Support</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+           <div class="container">
+            <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grave Matters. All rights reserved. | Privacy Policy | Terms of Service</p>
+                    <h3>IDs</h3>
+                    <div class="footer-section">
+                    <ul>
+                        <li>212081889 | 213384860 | 212087373 | 211575451</li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </footer>

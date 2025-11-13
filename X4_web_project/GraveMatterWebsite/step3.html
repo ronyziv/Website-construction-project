@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grave Matters | Find the Right Support for Your Loss</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <script>
+        // omri script NUMBER TWO
+        // getting the data from localStorage and displaying it info summery
+        let nameVal= localStorage.getItem("nameVal");
+        let emailVal = localStorage.getItem("emailVal");
+        let phoneVal = localStorage.getItem("phoneVal");
+        let lossVal = localStorage.getItem("loss");
+        let urgVal = localStorage.getItem("urgency");
+        let locVal = localStorage.getItem("location");
+        let serVal = localStorage.getItem("service");
+            
+        function func1(){
+            document.getElementById('omri').textContent="Name : " + nameVal;
+            document.getElementById('emailInfo').textContent="Email : " + emailVal;
+            document.getElementById('phoneInfo').textContent="Phone : " + phoneVal;
+            document.getElementById('lossInfo').textContent="Loss chosen : " + lossVal;
+            document.getElementById('urgInfo').textContent="Urgency chosen : " + urgVal;
+            document.getElementById('locInfo').textContent="Location chosen : " + locVal;
+            document.getElementById('serInfo').textContent="Service chosen : " + serVal;
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">&#128367; Grave Matters</div>
+            <ul class="nav-links">
+                <li><a href="step1.html">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+        
+        <div class="page-indicator">
+            <span id="page-indicator-text">Step 3 of 4: Review Your Support Plan</span>
+        </div>
+        
+    </header>
+    <div class="hero">
+                        <div class="logo"> <img src="GMLogo.png" alt="Grave Matters Logo" class="logo-image" style="width: 450px; height: 100px;"> </div>
+            <h1>Find the Right Support for Your Loss</h1>
+            <p>Helping you navigate through grief with personalized support services.</p>
+    </div>
+    
+    <!-- the area where the info summery will be displayed using the script that takes info from-->
+    <section class="preferences-form">
+        <div class="container">
+            <div class="summary-container">
+                <div class="summary-header">
+                    <h2>Your Information Summery:</h2>
+                    <p>Here are your selected services with direct links to get started</p>
+                </div> 
+                <div class="summary-content">
+                    <label id="omri"      class="export-label">  this</label> <br><br>
+                    <label id="emailInfo" class="export-label">  was</label> <br><br>
+                    <label id="phoneInfo" class="export-label">  much</label> <br><br>
+                    <label id="serInfo"   class="export-label">  harder</label> <br><br>
+                    <label id="lossInfo"  class="export-label">  than</label> <br><br>
+                    <label id="locInfo"   class="export-label">  i thought</label> <br><br>
+                    <label id="urgInfo"   class="export-label"> at least didnt use AI! :3</label> <br>
+                </div>
+
+
+                <div name = "buttons" style="position: absolute">
+                    <button type="button" class="export-button" id="exportBtn" onclick="window.location.href='step4.html'" style="background: #38a169;"> Complete Registration </button>
+                    <button class="export-button" id="exportBtn" onclick="exportToPDF()" style="background: #38a169;"> 📄 Export to PDF </button>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#grief-counseling">Grief Counseling</a></li>
+                        <li><a href="#funeral-homes">Funeral Homes</a></li>
+                        <li><a href="#legal-services">Legal Services</a></li>
+                        <li><a href="#support-groups">Support Groups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="tel:1-800-GRAVE-01">1-800-GRAVE-01</a></li>
+                        <li><a href="mailto:support@gravematters.com">support@gravematters.com</a></li>
+                        <li><a href="#chat">24/7 Support</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+           <div class="container">
+            <div class="footer-content">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grave Matters. All rights reserved. | Privacy Policy | Terms of Service</p>
+                    <h3>IDs</h3>
+                    <div class="footer-section">
+                    <ul>
+                        <li>212081889 | 213384860 | 212087373 | 211575451</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script>
+        func1();
+    </script>
+</body>
+    
